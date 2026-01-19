@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import Script from 'next/script'
 import { GTM_ID, isGTMEnabled, getGTMInlineScript, getGTMNoScriptUrl } from '@/lib/analytics'
+import { ThemeProvider } from "@/components/theme-provider"
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -46,7 +47,7 @@ export default function RootLayout({
 }>) {
   const gtmScript = getGTMInlineScript()
   const gtmNoScriptUrl = getGTMNoScriptUrl()
-  
+
   return (
     <html lang="en">
       <head>
@@ -71,8 +72,15 @@ export default function RootLayout({
             />
           </noscript>
         )}
-        {children}
-        <Analytics />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   )
