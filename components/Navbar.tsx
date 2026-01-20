@@ -32,11 +32,18 @@ export function Navbar({ content, whatsappUrl }: NavbarProps) {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 lg:px-6">
         {/* Logo */}
-        <Link 
-          href="/" 
-          className="text-xl font-bold text-foreground-bright tracking-tight"
+        {/* Logo */}
+        <Link
+          href="/"
+          className="flex items-center"
         >
-          {content.logo}
+          <div className="relative h-10 w-auto">
+            <img
+              src="/DDL logo.png"
+              alt={content.logo}
+              className="h-full w-auto object-contain"
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -55,7 +62,7 @@ export function Navbar({ content, whatsappUrl }: NavbarProps) {
 
         {/* Desktop CTA */}
         <div className="hidden items-center gap-3 md:flex">
-          <ChatButton 
+          <ChatButton
             whatsappUrl={whatsappUrl}
             variant="outline"
             className="border-muted-foreground/30 text-muted-foreground hover:bg-muted hover:text-foreground-bright bg-transparent"
@@ -100,7 +107,7 @@ export function Navbar({ content, whatsappUrl }: NavbarProps) {
                 </a>
               ))}
               <div className="mt-2 flex flex-col gap-2">
-                <ChatButton 
+                <ChatButton
                   whatsappUrl={whatsappUrl}
                   variant="outline"
                   className="w-full border-muted-foreground/30 text-muted-foreground hover:bg-muted hover:text-foreground-bright bg-transparent"
