@@ -15,7 +15,7 @@ export interface ServicesContent {
 export const servicesContent: ServicesContent = {
   sectionTitle: "Services",
   sectionSubtitle: "Comprehensive tracking and analytics solutions for service businesses, agencies, SaaS, and e-commerce",
-  personalNote: "I personally handle all tracking and analytics work — no outsourcing, no handoffs. You work directly with me from start to finish.",
+  personalNote: "Work directly with a specialist from start to finish. No outsourcing, no handoffs.",
   services: [
     {
       title: "Offline Conversion Tracking",

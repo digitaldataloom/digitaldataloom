@@ -7,10 +7,10 @@ interface TrustStripProps {
 export function TrustStrip({ content }: TrustStripProps) {
   return (
     <section className="border-y border-border bg-background-secondary py-8">
-      <div className="mx-auto max-w-[1200px] px-4 lg:px-6">
-        <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-16">
-          {content.items.map((item) => (
-            <div key={item.title} className="flex flex-col items-center text-center">
+      <div className="mx-auto max-w-[1200px] px-4 lg:px-6 overflow-hidden">
+        <div className="flex w-max gap-16 animate-scroll mask-gradient">
+          {[...content.items, ...content.items].map((item, i) => (
+            <div key={`${item.title}-${i}`} className="flex flex-col items-center text-center min-w-[150px]">
               <span className="text-sm font-semibold uppercase tracking-wider text-accent-yellow">
                 {item.title}
               </span>
