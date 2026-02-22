@@ -10,7 +10,7 @@
 // ============================================
 // GTM CONFIGURATION - EDIT HERE
 // ============================================
-export const GTM_ID: string | null = "GTM-XXXXXXX"
+export const GTM_ID: string | null = "GTM-NBFCCKGK"
 
 // ============================================
 // GTM HELPER FUNCTIONS - DO NOT EDIT BELOW

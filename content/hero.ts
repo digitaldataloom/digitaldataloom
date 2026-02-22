@@ -25,5 +25,5 @@ export const heroContent: HeroContent = {
     text: "See How It Works",
     href: "#how-it-works",
   },
-  videoId: "dQw4w9WgXcQ", // Replace with actual video ID
+  videoId: "7QFD1XQ-Rcg", // Replace with actual video ID
 }
