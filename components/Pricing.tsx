@@ -33,21 +33,23 @@ export function Pricing({ content }: PricingProps) {
 
         {/* Tabs */}
         <Tabs defaultValue={content.tabs[0].id} className="mb-12 flex flex-col items-center">
-          <TabsList className="mb-8 w-full max-w-md bg-transparent p-0 gap-2 border border-border/40 rounded-full h-auto">
-            {content.tabs.map((tab) => (
-              <TabsTrigger
-                key={tab.id}
-                value={tab.id}
-                className={cn(
-                  "flex-1 rounded-full py-3 text-sm font-medium transition-all duration-300",
-                  "data-[state=active]:bg-[#7C3AED] data-[state=active]:text-white", // Purple accent
-                  "data-[state=inactive]:bg-transparent data-[state=inactive]:text-muted-foreground hover:text-foreground-bright"
-                )}
-              >
-                {tab.label}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+          {content.tabs.length > 1 && (
+            <TabsList className="mb-8 w-full max-w-md bg-transparent p-0 gap-2 border border-border/40 rounded-full h-auto">
+              {content.tabs.map((tab) => (
+                <TabsTrigger
+                  key={tab.id}
+                  value={tab.id}
+                  className={cn(
+                    "flex-1 rounded-full py-3 text-sm font-medium transition-all duration-300",
+                    "data-[state=active]:bg-[#7C3AED] data-[state=active]:text-white", // Purple accent
+                    "data-[state=inactive]:bg-transparent data-[state=inactive]:text-muted-foreground hover:text-foreground-bright"
+                  )}
+                >
+                  {tab.label}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          )}
 
           {/* Pricing Note */}
           <p className="mb-8 text-center text-sm text-muted-foreground/80 italic">

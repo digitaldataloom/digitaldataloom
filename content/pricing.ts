@@ -33,7 +33,7 @@ export const pricingContent: PricingContent = {
       tiers: [
         {
           name: "GA4 Setup – Service-Based Website",
-          price: "$450 (starting at)",
+          price: "$350 (starting at)",
           description: "One-time GA4 and GTM setup for lead tracking.",
           features: [
             "GA4 property & event configuration",
@@ -46,7 +46,7 @@ export const pricingContent: PricingContent = {
         },
         {
           name: "GA4 E-commerce Setup",
-          price: "$750 (starting at)",
+          price: "$550 (starting at)",
           description: "One-time GA4 e-commerce implementation.",
           features: [
             "GA4 enhanced e-commerce events",
@@ -68,55 +68,6 @@ export const pricingContent: PricingContent = {
             "Call tracking integration",
           ],
           ctaText: "Discuss OCT Setup",
-          ctaHref: "#contact",
-        },
-      ],
-    },
-    {
-      id: "monthly-management",
-      label: "Monthly Management",
-      tiers: [
-        {
-          name: "Monthly Management – Basic",
-          price: "$150 / month / website",
-          description: "Essential maintenance and monitoring.", // Inferred description
-          features: [
-            "GA4 & GTM tracking maintenance",
-            "Data accuracy & event monitoring",
-            "Up to 2 tracking or analytics requests",
-            "Basic reporting checks",
-            "Fixes delivered within 48 hours",
-          ],
-          ctaText: "Start Monthly Management",
-          ctaHref: "#contact",
-        },
-        {
-          name: "Monthly Management – Premium",
-          price: "$300 / month / website",
-          description: "Most Popular choice for businesses.", // Inferred description
-          highlighted: true,
-          features: [
-            "GA4, GTM & Looker Studio support",
-            "Tracking updates & new event requests",
-            "Conversion & funnel analysis",
-            "Up to 5 tracking/analytics requests",
-            "Priority fixes within 24–48 hours",
-          ],
-          ctaText: "Get Priority Support",
-          ctaHref: "#contact",
-        },
-        {
-          name: "Monthly Management – Pro",
-          price: "$450 / month / website",
-          description: "Comprehensive enterprise-grade support.", // Inferred description
-          features: [
-            "GA4, GTM, BigQuery & Looker Studio",
-            "Unlimited tracking & analytics requests",
-            "Advanced reporting & diagnostics",
-            "24/7 monitoring to prevent data loss",
-            "Same-day fixes with priority support",
-          ],
-          ctaText: "Apply for Pro Management",
           ctaHref: "#contact",
         },
       ],

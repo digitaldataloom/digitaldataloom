@@ -16,7 +16,7 @@ export interface HeroContent {
 export const heroContent: HeroContent = {
   headline: "Know Exactly What Works With Accurate Conversion Tracking and Analytics",
   subheadline: "Accurate GA4, GTM, server-side tracking, and analytics dashboards allow you to clearly see what drives results and where ad spend is wasted.",
-  personalNote: "✔️ Tracking Setup in 6 Hours ✔️ I Take Care of Everything ✔️ 24/7 Dedicated Expert Support",
+  personalNote: "✔️ Tracking Setup within 24 Hours ✔️ I Take Care of Everything ✔️ Reliable Post-Setup Support",
   primaryCta: {
     text: "Claim Free Audit",
     href: "#contact",
