@@ -40,24 +40,24 @@ export function ContactForm() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // In a real app, you'd send this to your API
     console.log("Form submitted with values:", values)
-    
+
     // Push event to dataLayer for tracking
-    if (typeof window !== "undefined") {
-      const gtmDataLayer = (window as any).dataLayer || [];
-      gtmDataLayer.push({
-        event: "contact_form_submit",
-        form_id: "contact_form",
-        form_name: "Contact Form",
-        user_data: {
-          first_name: values.firstName,
-          last_name: values.lastName,
-          email: values.email,
-          phone: values.phoneNumber,
-        },
-        message_length: values.message.length,
-        timestamp: new Date().toISOString()
-      });
-    }
+    // if (typeof window !== "undefined") {
+    //   const gtmDataLayer = (window as any).dataLayer || [];
+    //   gtmDataLayer.push({
+    //     event: "contact_form_submit",
+    //     form_id: "contact_form",
+    //     form_name: "Contact Form",
+    //     user_data: {
+    //       first_name: values.firstName,
+    //       last_name: values.lastName,
+    //       email: values.email,
+    //       phone: values.phoneNumber,
+    //     },
+    //     message_length: values.message.length,
+    //     timestamp: new Date().toISOString()
+    //   });
+    // }
 
     toast.success("Thank you! Your message has been sent successfully.")
     form.reset()
@@ -77,7 +77,7 @@ export function ContactForm() {
             Get in <span className="text-accent-cta">Touch</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or want to discuss a potential collaboration? 
+            Have a project in mind or want to discuss a potential collaboration?
             Fill out the form below and I{"'"}ll get back to you within 24 hours.
           </p>
         </div>
@@ -93,10 +93,10 @@ export function ContactForm() {
                     <FormItem>
                       <FormLabel className="text-foreground-bright">First Name</FormLabel>
                       <FormControl>
-                        <Input 
-                          placeholder="John" 
-                          {...field} 
-                          className="bg-background border-border/50 focus:border-accent-blue/50 focus:ring-accent-blue/20 transition-all h-12" 
+                        <Input
+                          placeholder="John"
+                          {...field}
+                          className="bg-background border-border/50 focus:border-accent-blue/50 focus:ring-accent-blue/20 transition-all h-12"
                         />
                       </FormControl>
                       <FormMessage />
@@ -110,10 +110,10 @@ export function ContactForm() {
                     <FormItem>
                       <FormLabel className="text-foreground-bright">Last Name</FormLabel>
                       <FormControl>
-                        <Input 
-                          placeholder="Doe" 
-                          {...field} 
-                          className="bg-background border-border/50 focus:border-accent-blue/50 focus:ring-accent-blue/20 transition-all h-12" 
+                        <Input
+                          placeholder="Doe"
+                          {...field}
+                          className="bg-background border-border/50 focus:border-accent-blue/50 focus:ring-accent-blue/20 transition-all h-12"
                         />
                       </FormControl>
                       <FormMessage />
@@ -130,11 +130,11 @@ export function ContactForm() {
                     <FormItem>
                       <FormLabel className="text-foreground-bright">Email Address</FormLabel>
                       <FormControl>
-                        <Input 
-                          placeholder="john@example.com" 
-                          type="email" 
-                          {...field} 
-                          className="bg-background border-border/50 focus:border-accent-blue/50 focus:ring-accent-blue/20 transition-all h-12" 
+                        <Input
+                          placeholder="john@example.com"
+                          type="email"
+                          {...field}
+                          className="bg-background border-border/50 focus:border-accent-blue/50 focus:ring-accent-blue/20 transition-all h-12"
                         />
                       </FormControl>
                       <FormMessage />
@@ -148,11 +148,11 @@ export function ContactForm() {
                     <FormItem>
                       <FormLabel className="text-foreground-bright">Phone Number</FormLabel>
                       <FormControl>
-                        <Input 
-                          placeholder="+1 (555) 000-0000" 
-                          type="tel" 
-                          {...field} 
-                          className="bg-background border-border/50 focus:border-accent-blue/50 focus:ring-accent-blue/20 transition-all h-12" 
+                        <Input
+                          placeholder="+1 (555) 000-0000"
+                          type="tel"
+                          {...field}
+                          className="bg-background border-border/50 focus:border-accent-blue/50 focus:ring-accent-blue/20 transition-all h-12"
                         />
                       </FormControl>
                       <FormMessage />
@@ -168,10 +168,10 @@ export function ContactForm() {
                   <FormItem>
                     <FormLabel className="text-foreground-bright">Message</FormLabel>
                     <FormControl>
-                      <Textarea 
-                        placeholder="Type your message here..." 
-                        className="min-h-[160px] bg-background border-border/50 focus:border-accent-blue/50 focus:ring-accent-blue/20 transition-all resize-none" 
-                        {...field} 
+                      <Textarea
+                        placeholder="Type your message here..."
+                        className="min-h-[160px] bg-background border-border/50 focus:border-accent-blue/50 focus:ring-accent-blue/20 transition-all resize-none"
+                        {...field}
                       />
                     </FormControl>
                     <FormMessage />
@@ -180,8 +180,8 @@ export function ContactForm() {
               />
 
               <div className="pt-4">
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full bg-accent-cta text-foreground-bright hover:bg-accent-cta/90 h-14 text-lg font-bold transition-all hover:scale-[1.01] hover:shadow-[0_0_20px_rgba(var(--accent-cta),0.3)] shadow-lg"
                 >
                   Send Message
